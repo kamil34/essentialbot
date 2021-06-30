@@ -1,4 +1,4 @@
-## essentialbot
+# essentialbot
  Just coding a simple discord bot
 ## Installation
 ```
