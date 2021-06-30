@@ -1,6 +1,6 @@
-# essentialbot
+## essentialbot
  Just coding a simple discord bot
-# Installation
+## Installation
 ```
 python3 -m pip install -U discord.py
 ```
