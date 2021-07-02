@@ -10,5 +10,11 @@ clock = (datetime.strftime("%H:%M:%S %p").replace('AM', 'a.m.').replace('PM', 'p
 
 @config.settings.bot.command()
 async def time(ctx):
-    await ctx.send('Current date is: {}'.format(date))
-    await ctx.send('Current time is: {}'.format(clock))
+    #await ctx.send('Current date is: {}'.format(date))
+    #await ctx.send('Current time is: {}'.format(clock))
+    message = discord.Embed(
+        title="The time information",
+        description="The current server time is: {} \n The current server date is: {}.".format(clock, date),
+        color=0x0066ff
+    )
+    await ctx.send(embed=message)
