@@ -1,4 +1,10 @@
+import discord
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix='.') # prefix
-token = "TYPE YOUR TOKEN HERE"; #token
+## discord intents settings
+intents = discord.Intents.default()
+intents.members = True
+
+# SETTINGS YOU NEED TO CHANGE
+bot = commands.Bot(command_prefix='.', intents=intents)  # prefix
+token = "YOUR TOKEN HERE"  # token

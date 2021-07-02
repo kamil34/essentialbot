@@ -2,9 +2,11 @@ import discord
 from discord.ext import commands
 
 ### BOT SETTINGS
-import config.settings
+from config.settings import bot as instance
+from config.settings import token as token
 
 ### FEATURES
-import commands.time # time command
+instance.load_extension("cogs.welcome")  # welcome event
+instance.load_extension("cogs.time")  # time command
 
-config.settings.bot.run(config.settings.token)
+instance.run(token)
