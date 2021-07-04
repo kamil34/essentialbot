@@ -4,7 +4,7 @@
 pyvenv.cfg
 \.DS_Store
 __pycache__
-.\config\settings.py
+\config\settings.py
 requirements.txt
 README.md
 LICENSE
