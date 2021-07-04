@@ -7,3 +7,5 @@ __pycache__
 \config\settings.py
 \.requirements.txt
 \.README.MD
+\.LICENSE
+\.config\settings.py

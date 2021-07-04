@@ -8,7 +8,7 @@ class Greetings(commands.Cog):
         if member.guild.system_channel:
             message = discord.Embed(
                 title="Hello there!",
-                description=f"Welcome and hello {member.mention} to our wonderful Discord community!",
+                description=f"Welcome and hello, {member.mention} to our wonderful Discord community!",
                 color=0x0066ff
             )
             await member.guild.system_channel.send(embed=message)
@@ -19,7 +19,7 @@ class Greetings(commands.Cog):
             message = discord.Embed(
                 title="See ya!",
                 description=f"{member.mention}, we feel sorry for leaving us. We wish you the best for the future.",
-                color=0x0066ff
+                color=0xff0000
             )
             await member.guild.system_channel.send(embed=message)
 
