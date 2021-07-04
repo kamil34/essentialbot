@@ -2,27 +2,29 @@ import discord
 from discord.ext import commands
 
 
-class Staff_commands(commands.Cog):
+class StaffCommands(commands.Cog):
     @commands.command()
     @commands.guild_only()
     # @commands.has_permissions(kick_members=True)
-    async def kick(self, ctx, member: discord.Member, reason=None):
-        if reason != "None":
+    async def kick(self, ctx, member: discord.Member, *, reason=None):
+        if reason is not None:
             await member.kick(reason=reason)
-            message = discord.Embed(
-                title="Ugh... Someone literally overdid something!",
-                description=f"{member.mention} has been kicked with the following reason: {reason}",
+
+            message = f"{member.mention} has been kicked with the following reason: {reason}"
+            await member.guild.system_channel.send(embed=discord.Embed(
+                title="Ugh... Someone in here literally overdid with something! What a shame!",
+                description=message,
                 color=0xff0000
-            )
-            await member.guild.system_channel.send(embed=message)
+            ))
         else:
-            message = discord.Embed(
-                title="Ugh... Someone literally overdid something!",
-                description=f"{member.mention} has been kicked with no reason. What a surprise!",
-                color=0xff0000
-            )
             await member.kick(reason=reason)
-            await member.guild.system_channel.send(embed=message)
+
+            message = f"{member.mention} has been kicked with no reason. What a surprise!"
+            await member.guild.system_channel.send(embed=discord.Embed(
+                title="Ugh... Someone in here literally overdid with something! What a shame!",
+                description=message,
+                color=0xff0000
+            ))
 
     @kick.error
     async def info_error(self, ctx, error):
@@ -31,4 +33,4 @@ class Staff_commands(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Staff_commands(client))
+    client.add_cog(StaffCommands(client))
