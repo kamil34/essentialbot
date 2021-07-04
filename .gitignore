@@ -5,7 +5,6 @@
 \.DS_Store
 __pycache__
 \config\settings.py
-\.requirements.txt
-\.README.MD
-\.LICENSE
-\.config\settings.py
+\requirements.txt
+\README.md
+\LICENSE
