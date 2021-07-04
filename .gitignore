@@ -1,10 +1,10 @@
 \bin
 \include
 \lib
-\pyvenv.cfg
+pyvenv.cfg
 \.DS_Store
 __pycache__
-\config\settings.py
-\requirements.txt
-\README.md
-\LICENSE
+.\config\settings.py
+requirements.txt
+README.md
+LICENSE
